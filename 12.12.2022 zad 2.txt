@@ -1,0 +1,55 @@
+namespace zadania
+{
+
+
+    internal class Program
+{
+        static void Main()
+        {
+        
+        }
+        class Koszyk
+        {
+            private int id;
+            private Produkt produkt;
+            private Uzytkownik uzytkownik;
+            public int getId() => id ;
+            public void operacja()
+            {
+                Console.WriteLine("Sprzedam produkt");
+            }
+        }
+        class Produkt
+        {
+            private string nazwa,opis;
+            private double cena;
+            public string getNazwa() => nazwa;
+            public double getCena() => cena;
+            public string getOpis() => opis;
+           public Produkt(string nazwa, string opis, double cena)
+            {
+                this.nazwa = nazwa;
+                this.opis = opis;
+                this.cena = cena;
+            }
+
+        }
+        class Uzytkownik
+        {
+            private string login, haslo;
+            private Profile profile;
+            public void loguj()
+            {
+                Console.WriteLine("Proces logowania proszę czekać...........");
+            }
+            
+        }
+        class Profile
+        {
+            private string imie, drugieimie, nazwisko;
+            public string getImie() => imie;
+            public string getNazwisko() => nazwisko;
+        }
+
+    }
+}
