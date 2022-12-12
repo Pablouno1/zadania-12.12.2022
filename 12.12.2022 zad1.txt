@@ -1,0 +1,52 @@
+namespace zadania
+{
+
+
+    internal class Program
+{
+        static void Main()
+        {
+            Producent producent= new Producent();
+            Materiał materiał=new Materiał();
+            Rower rower=new Rower();
+            materiał.setTyp("Plastik");
+            rower.setColor("Żółty");
+            materiał.setId(1);
+            rower.jedz();
+
+
+        }
+        class Rower
+        {
+        private Producent producent;
+        private Materiał materiał;
+            private string color;
+            public string getColor()=> color;
+            public void jedz()
+            {
+                Console.WriteLine("jedzimy");
+            }
+            public void setColor(string color)=>this.color=color;   
+        
+        }
+        class Producent
+        {
+        private string nazwa, nip;
+            public string getNazwa() => nazwa;
+            public string getNip() => nip;
+            
+            public void setNazwa(string nazwa)=>this.nazwa = nazwa;
+        }
+        class Materiał
+        {
+            private string typ;
+            public string getTyp() => typ;
+            public void setTyp(string typ)=>this.typ=typ;
+            private int id;
+            public void setId(int id)=>this.id=id;
+            private double cena;
+            public double getCena() => cena;
+
+        }
+    }
+}
